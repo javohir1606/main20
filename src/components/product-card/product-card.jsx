@@ -11,13 +11,7 @@ export const ProductCard = (img, title, price, brand, id) => {
           <Typography fontSize={"25px"}>{title}</Typography>
           <Typography>{formatter(price)} sum</Typography>
           <Typography>{brand}</Typography>
-          <Button
-            onClick={() => dispatch(addCart(props))}
-            fullWidth
-            variant="contained"
-          >
-            buy
-          </Button>
+         
         </Box>
       </Container>
     </Stack>
