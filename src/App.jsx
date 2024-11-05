@@ -2,24 +2,16 @@ import { Box, Container, height, Stack } from "@mui/system";
 import { products } from "./components/data/products";
 import { Button, Drawer, Grid2, Typography } from "@mui/material";
 import React from "react";
-import { Card } from "./components/card/card";
+import { Header } from "./components/header/header";
+
 function App() {
-  const [showP, setShowP] = React.useState(false);
+ 
 
   return (
     <>
       <Stack maxWidth={"1200px"}>
         <Container>
-          <Drawer
-            onClose={() => setShowP(false)}
-            open={showP}
-            anchor="left"
-          >
-            <Card/>
-          </Drawer>
-          <Button onClick={() => setShowP(true)} variant="contained">
-            Show card
-          </Button>
+           <Header/>
           <Grid2 container alignItems={"center"} spacing={2} mt="20px">
             {products.map((item) => (
               <Grid2
